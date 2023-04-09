@@ -11,7 +11,7 @@
     const email = document.getElementById('email');
     const roles = document.getElementsByClassName('information-role');
     const language = document.getElementsByName('role_programmist');
-    const audio = new Audio('/images/kapibara.mp3');
+    const audio = new Audio('../images/kapibara.mp3');
 
     console.log(`name: ${name.value}`);
     console.log(`tel: ${tel.value}`);
