@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>goit-markup-hw-04</title>
+    <title>goit-markup-hw-06</title>
   </head>
   <body>
     <header class="header">
@@ -55,6 +55,7 @@
         </address>
       </div>
     </header>
+
     <main>
       <section class="hero">
         <h1 class="hero-title">Effective Solutions for Your Business</h1>
@@ -430,6 +431,7 @@
 
         <div class="footer-contacts">
           <h2 class="footer-title">Social media</h2>
+
           <ul class="icons list">
             <li>
               <a href="./" class="footer-icon">
@@ -472,10 +474,93 @@
             </li>
           </ul>
         </div>
+
+        <div class="footer-subscribe">
+          <form class="footer-form">
+            <label for="footer-email">Subscribe</label>
+            <input
+              type="email"
+              name="email"
+              id="footer-email"
+              placeholder="E-mail"
+              autocomplete="on"
+            />
+          </form>
+          <button type="submit" class="button footer-form-button">
+            Subscribe
+            <svg class="icon">
+              <use
+                href="./images/svg-sprite/symbol-defs.svg#icon-subscribe"
+              ></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </footer>
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <div class="modal-form">
+          <form class="js-speaker-form" autocomplete="off">
+            <p class="modal-text">
+              Leave your contacts and we will call you back
+            </p>
+
+            <label class="modal-form modal-form-name" for="name">
+              Name
+              <input type="text" name="name" id="name" />
+              <svg>
+                <use href="./images/svg-sprite/symbol-defs.svg#icon-name"></use>
+              </svg>
+            </label>
+
+            <label class="modal-form modal-form-tel" for="tel">
+              Phone
+              <input type="tel" name="telephone" id="tel" />
+              <svg>
+                <use
+                  href="./images/svg-sprite/symbol-defs.svg#icon-phone"
+                ></use>
+              </svg>
+            </label>
+
+            <label class="modal-form modal-form-email" for="email">
+              Email
+              <input type="email" name="email" id="email" />
+              <svg>
+                <use
+                  href="./images/svg-sprite/symbol-defs.svg#icon-email"
+                ></use>
+              </svg>
+            </label>
+
+            <div class="modal-form modal-form-comment">
+              <label for="modal-comment">Comment</label>
+              <textarea
+                name="comment"
+                rows="5"
+                placeholder="Text input"
+                id="modal-comment"
+              ></textarea>
+            </div>
+
+            <label class="modal-form-licension" for="licension">
+              <input type="checkbox" name="licension" id="licension" required />
+              <svg class="licension-icon">
+                <use
+                  href="./images/svg-sprite/symbol-defs.svg#icon-license-agreement"
+                ></use>
+              </svg>
+              <span
+                >I accept the terms and conditions of the
+                <a href="./" class="modal-policy-link">Privacy Policy</a></span
+              >
+            </label>
+
+            <button type="submit" class="modal-button-send button">Send</button>
+          </form>
+        </div>
+
         <button data-modal-close class="modal-button">
           <svg>
             <use href="./images/svg-sprite/symbol-defs.svg#icon-x"></use>
@@ -483,6 +568,23 @@
         </button>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
+
+    <script defer src="./js/speaker.js"></script>
   </body>
 </html>
+<style>
+  .rotate-animation {
+    animation: rotate 5s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(720deg);
+    }
+  }
+</style>
